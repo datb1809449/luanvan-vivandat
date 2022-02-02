@@ -1,0 +1,58 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tam_trang_buon
+  - muon_doc_sach
+  - thoi_gian
+  - quy_dinh
+
+responses:
+  utter_greet:
+  - text: "Xin chào, tôi giúp bạn được bạn gì không?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_quy_dinh:
+  - text: "Sau đây là các quy định của thư viện: /n Đ1: Không trộm sách /n Đ2: Phải trả sách đúng hạn "
+     
+
+  utter_thoi_gian:
+  - text: "Thời gian hoạt động bắt đầu lúc 7h và kết thúc lúc 17h"
+   
+
+  utter_tam_trang_buon:
+  - text: "Bạn có thể đọc sách vui vui, vd: Sayu "
+  - text: "Bạn có thể đọc sách vui vui, vd: 7 viên ngọc rồng "
+  - text: "Tham khảo top 10 sách giúp bạn vui vẻ hơn"
+  - text: "Bạn có thể đọc truyện manga, nó giúp bạn cảm thấy vui hơn"
+
+  utter_muon_doc_sach:
+  - text: "Sau đây là các bước để mượn sách"
+    # text: "B1: Thêm vào phiếu mượn"
+    # text: "B2: Lựa chọn quyển sách cần mượn"
+    # text: "B3: Yêu cầu mượn sách"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

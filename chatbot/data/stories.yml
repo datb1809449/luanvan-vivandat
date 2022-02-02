@@ -1,0 +1,52 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: tu_van thoi_gian
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: muon_doc_sach
+  - action: utter_muon_doc_sach
+
+- story: quy_dinh
+  steps:
+  - intent: quy_dinh
+  - action: utter_quy_dinh
+
+- story: tam_trang buon
+  steps:
+  - intent: tam_trang_buon
+  - action: utter_tam_trang_buon
+
+- story: hoi thoi gian
+  steps:
+  - intent: thoi_gian
+  - action: utter_thoi_gian
